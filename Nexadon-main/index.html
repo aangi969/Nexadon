@@ -5952,24 +5952,6 @@
             <p>Instantly claim your bonus NXD token tier reward and unlock higher ecosystem perks.</p>
           </div>
         </div>
-
-        <!-- Interactive Calculator -->
-        <div class="ref-calculator">
-          <div class="calc-label">
-            <h4>Interactive Referral Reward Estimator</h4>
-            <p>Select your referral milestone target to calculate rewards</p>
-          </div>
-          <div class="calc-controls">
-            <button class="calc-btn active" data-refs="10">10 Referrals</button>
-            <button class="calc-btn" data-refs="20">20 Referrals</button>
-            <button class="calc-btn" data-refs="50">50 Referrals</button>
-            <button class="calc-btn" data-refs="100">100 Referrals</button>
-          </div>
-          <div class="calc-result-box">
-            <small>Target Reward</small>
-            <b id="refRewardVal">Tier 1 Bonus</b>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -6623,23 +6605,7 @@
         });
       });
 
-      /* 9. REFERRAL CALCULATOR */
-      const calcBtns = document.querySelectorAll('.calc-btn');
-      const refRewardVal = document.getElementById('refRewardVal');
-      const rewardMap = {
-        '10': 'Tier 1 Reward (Active)',
-        '20': 'Tier 2 + 10% Extra',
-        '50': 'Tier 3 + 25% Bonus NXD',
-        '100': 'VIP Elite Ambassador'
-      };
-      calcBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          calcBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const refs = btn.getAttribute('data-refs');
-          if (refRewardVal) refRewardVal.textContent = rewardMap[refs] || 'Tier 1';
-        });
-      });
+
 
       /* 10. FAQ ACCORDION */
       const faqItems = document.querySelectorAll('.faq-item');
