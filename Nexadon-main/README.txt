@@ -1,0 +1,1 @@
+Upload index.html and nexadon-logo.png together to public_html. Fully responsive animated coming-soon page.
