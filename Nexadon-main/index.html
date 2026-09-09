@@ -405,7 +405,7 @@
       background-color: #020805;
     }
 
-    /* Photorealistic 3D Digital Earth Globe + Floating Crypto Medallions (BTC, ETH, USDT, NXD) */
+    /* Photorealistic 3D Digital Earth Globe + Floating NexaDon (N) Medallion */
     .crypto-earth-layer {
       position: absolute;
       inset: 0;
@@ -419,13 +419,14 @@
       opacity: 0.96;
     }
 
-    /* Floating Ambient 3D Crypto Badges (BTC, ETH, USDT, NXD) */
+    /* Floating Ambient 3D NexaDon (N) Medallions (Compact 3D Badges) */
     .crypto-floating-tokens {
       position: absolute;
       inset: 0;
       pointer-events: none;
       overflow: hidden;
       z-index: 2;
+      perspective: 800px;
     }
 
     .crypto-token-badge {
@@ -436,96 +437,77 @@
       font-weight: 900;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.75), inset 0 1.5px 2px rgba(255, 255, 255, 0.4), inset 0 -2px 3px rgba(0, 0, 0, 0.8);
       user-select: none;
-    }
-
-    .token-btc {
-      top: 18%;
-      right: 13%;
-      width: 54px;
-      height: 54px;
-      background: radial-gradient(circle, rgba(247, 147, 26, 0.28) 0%, rgba(15, 20, 28, 0.88) 100%);
-      border: 1.5px solid rgba(247, 147, 26, 0.65);
-      color: #F7931A;
-      font-size: 24px;
-      box-shadow: 0 0 25px rgba(247, 147, 26, 0.35);
-      animation: cryptoFloatA 7s ease-in-out infinite;
-    }
-
-    .token-eth {
-      top: 36%;
-      right: 6%;
-      width: 46px;
-      height: 46px;
-      background: radial-gradient(circle, rgba(98, 126, 234, 0.28) 0%, rgba(15, 20, 28, 0.88) 100%);
-      border: 1.5px solid rgba(98, 126, 234, 0.65);
-      color: #8C9EFF;
-      font-size: 22px;
-      box-shadow: 0 0 20px rgba(98, 126, 234, 0.35);
-      animation: cryptoFloatB 9s ease-in-out infinite;
-    }
-
-    .token-usdt {
-      bottom: 24%;
-      right: 17%;
-      width: 48px;
-      height: 48px;
-      background: radial-gradient(circle, rgba(38, 161, 123, 0.28) 0%, rgba(15, 20, 28, 0.88) 100%);
-      border: 1.5px solid rgba(38, 161, 123, 0.65);
-      color: #26A17B;
-      font-size: 22px;
-      box-shadow: 0 0 22px rgba(38, 161, 123, 0.35);
-      animation: cryptoFloatC 8s ease-in-out infinite;
+      transform-style: preserve-3d;
     }
 
     .token-nxd {
-      top: 54%;
-      right: 24%;
-      width: 42px;
-      height: 42px;
-      background: radial-gradient(circle, rgba(242, 199, 92, 0.28) 0%, rgba(15, 20, 28, 0.88) 100%);
-      border: 1.5px solid rgba(242, 199, 92, 0.75);
       color: var(--gold);
-      font-size: 20px;
       font-family: 'Outfit', sans-serif;
-      box-shadow: 0 0 22px rgba(242, 199, 92, 0.4);
-      animation: cryptoFloatA 8.5s ease-in-out infinite reverse;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 12px rgba(242, 199, 92, 0.6);
+    }
+
+    .token-nxd-1 {
+      top: 16%;
+      right: 11%;
+      width: 44px;
+      height: 44px;
+      background: radial-gradient(circle, rgba(242, 199, 92, 0.35) 0%, rgba(15, 20, 28, 0.92) 100%);
+      border: 1.5px solid rgba(242, 199, 92, 0.85);
+      font-size: 21px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.7), 0 0 20px rgba(242, 199, 92, 0.4), inset 0 1.5px 2px rgba(255, 255, 255, 0.45);
+      animation: cryptoFloatA 7.5s ease-in-out infinite;
+    }
+
+    .token-nxd-2 {
+      top: 48%;
+      right: 5%;
+      width: 36px;
+      height: 36px;
+      background: radial-gradient(circle, rgba(242, 199, 92, 0.28) 0%, rgba(10, 24, 20, 0.94) 100%);
+      border: 1.5px solid rgba(242, 199, 92, 0.7);
+      font-size: 17px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7), 0 0 16px rgba(242, 199, 92, 0.3), inset 0 1px 1.5px rgba(255, 255, 255, 0.35);
+      animation: cryptoFloatB 9s ease-in-out infinite;
+    }
+
+    .token-nxd-3 {
+      bottom: 22%;
+      right: 14%;
+      width: 38px;
+      height: 38px;
+      background: radial-gradient(circle, rgba(242, 199, 92, 0.3) 0%, rgba(12, 18, 28, 0.94) 100%);
+      border: 1.5px solid rgba(242, 199, 92, 0.75);
+      font-size: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7), 0 0 18px rgba(242, 199, 92, 0.35), inset 0 1px 1.5px rgba(255, 255, 255, 0.4);
+      animation: cryptoFloatC 8s ease-in-out infinite;
     }
 
     @keyframes cryptoFloatA {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0deg);
+      0%, 100% {
+        transform: translateY(0) rotateY(0deg) rotateX(4deg);
       }
-
       50% {
-        transform: translateY(-16px) rotate(8deg);
+        transform: translateY(-14px) rotateY(18deg) rotateX(-6deg);
       }
     }
 
     @keyframes cryptoFloatB {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0deg);
+      0%, 100% {
+        transform: translateY(0) rotateY(0deg) rotateX(-4deg);
       }
-
       50% {
-        transform: translateY(-20px) rotate(-10deg);
+        transform: translateY(-16px) rotateY(-20deg) rotateX(8deg);
       }
     }
 
     @keyframes cryptoFloatC {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(0deg);
+      0%, 100% {
+        transform: translateY(0) rotateY(0deg) rotateX(6deg);
       }
-
       50% {
-        transform: translateY(-14px) rotate(6deg);
+        transform: translateY(-12px) rotateY(14deg) rotateX(-4deg);
       }
     }
 
@@ -2754,8 +2736,8 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr 1fr 1.4fr;
-      gap: 40px;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
     }
 
     .footer-brand img {
@@ -3526,41 +3508,33 @@
         height: min(250px, 70vw) !important;
       }
 
-      /* Ambient Floating Crypto Badges */
+      /* Ambient Floating NexaDon (N) Badges (Compact 3D Badges) */
       .crypto-floating-tokens {
         opacity: 0.35;
       }
 
-      .token-btc {
-        width: 38px;
-        height: 38px;
-        font-size: 18px;
-        top: 10%;
-        right: 4%;
-      }
-
-      .token-eth {
-        width: 34px;
-        height: 34px;
-        font-size: 16px;
-        top: 38%;
-        right: 2%;
-      }
-
-      .token-usdt {
-        width: 34px;
-        height: 34px;
-        font-size: 16px;
-        bottom: 18%;
-        right: 4%;
-      }
-
-      .token-nxd {
+      .token-nxd-1 {
         width: 32px;
         height: 32px;
         font-size: 15px;
-        top: 58%;
-        right: 10%;
+        top: 12%;
+        right: 4%;
+      }
+
+      .token-nxd-2 {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        top: 46%;
+        right: 3%;
+      }
+
+      .token-nxd-3 {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        bottom: 18%;
+        right: 5%;
       }
 
       /* All Card Grids Stack Cleanly on Mobile */
@@ -4488,19 +4462,16 @@
 
   <!-- Professional Bitcoin / Crypto Institutional Dark Background -->
   <div id="crypto-bg" aria-hidden="true">
-    <!-- Photorealistic 3D Digital Earth Globe + Floating Crypto Medallions (BTC, ETH, USDT, NXD) -->
+    <!-- Photorealistic 3D Digital Earth Globe + Floating NexaDon (N) Medallion -->
     <div class="crypto-earth-layer"></div>
     <div class="crypto-floating-tokens">
-      <div class="crypto-token-badge token-btc" title="Bitcoin (BTC)">
-        <span>₿</span>
+      <div class="crypto-token-badge token-nxd token-nxd-1" title="NexaDon (NXD)">
+        <span>N</span>
       </div>
-      <div class="crypto-token-badge token-eth" title="Ethereum (ETH)">
-        <span>Ξ</span>
+      <div class="crypto-token-badge token-nxd token-nxd-2" title="NexaDon Utility">
+        <span>N</span>
       </div>
-      <div class="crypto-token-badge token-usdt" title="Tether (USDT)">
-        <span>₮</span>
-      </div>
-      <div class="crypto-token-badge token-nxd" title="NexaDon (NXD)">
+      <div class="crypto-token-badge token-nxd token-nxd-3" title="NexaDon Ecosystem">
         <span>N</span>
       </div>
     </div>
@@ -6105,19 +6076,7 @@
           </ul>
         </div>
 
-        <div class="footer-links-col">
-          <h5>Newsletter</h5>
-          <p style="color:var(--text-muted); font-size:13px;">Stay updated with our latest development milestones and
-            airdrops.</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Enter your email" required id="newsletterEmail">
-            <button type="submit" aria-label="Subscribe">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </form>
-        </div>
+        
       </div>
 
       <p class="footer-disclaimer">
@@ -6636,15 +6595,7 @@
         });
       }
 
-      /* 12. NEWSLETTER SUBMIT SIMULATION */
-      const newsletterForm = document.getElementById('newsletterForm');
-      if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          alert('Thank you for subscribing to NexaDon updates!');
-          newsletterForm.reset();
-        });
-      }
+      /* 12. NEWSLETTER REMOVED */
 
       /* 13. SCROLL REVEAL OBSERVER */
       const reveals = document.querySelectorAll('.reveal');
